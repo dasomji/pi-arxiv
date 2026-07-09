@@ -53,6 +53,13 @@ pi -e .
 
 Or add this local package to project/user Pi settings.
 
+## Credits
+
+This extension was inspired by the Pi arXiv plugins that came before it:
+
+- [pi-arxiv](https://pi.dev/packages/pi-arxiv?name=arxiv)
+- [pi-arxivist](https://pi.dev/packages/pi-arxivist?name=arxiv)
+
 ## Notes
 
 - arXiv API calls are throttled with a 3 second delay between requests, following arXiv's guidance for repeated API calls.
