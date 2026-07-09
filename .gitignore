@@ -1,0 +1,5 @@
+node_modules/
+.tmp-verify/
+*.tgz
+.pi/git/
+.pi/npm/

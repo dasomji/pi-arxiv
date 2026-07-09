@@ -1,0 +1,12 @@
+{
+  "packages": [
+    {
+      "source": "npm:@wienerberliner/pi-arxiv",
+      "extensions": [],
+      "skills": [],
+      "prompts": [],
+      "themes": []
+    },
+    ".."
+  ]
+}
