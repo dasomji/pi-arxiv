@@ -13,7 +13,7 @@
   "type": "module",
   "pi": {
     "extensions": [
-      "./extensions"
+      "./extensions/index.ts"
     ]
   },
   "files": [
@@ -22,10 +22,11 @@
     "LICENSE"
   ],
   "scripts": {
+    "test": "node --test test/*.test.mjs",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
-    "fast-xml-parser": "^5.2.0"
+    "fast-xml-parser": "5.10.1"
   },
   "peerDependencies": {
     "@earendil-works/pi-ai": "*",
