@@ -8,6 +8,7 @@ import { StringEnum } from "@earendil-works/pi-ai";
 import { Text } from "@earendil-works/pi-tui";
 import { Type } from "typebox";
 import { XMLParser } from "fast-xml-parser";
+import { fetchBoundedText } from "./fetch-text.js";
 
 const ARXIV_API = "https://export.arxiv.org/api/query";
 const ARXIV2MD_API = "https://arxiv2md.org/api/markdown";
@@ -353,14 +354,7 @@ async function rateLimitArxivApi(): Promise<void> {
 }
 
 async function fetchText(url: URL, signal?: AbortSignal): Promise<string> {
-  const response = await fetch(url, {
-    signal,
-    headers: { "user-agent": USER_AGENT },
-  });
-  if (!response.ok) {
-    throw new Error(`Request failed: HTTP ${response.status} ${response.statusText} for ${url.toString()}`);
-  }
-  return response.text();
+  return fetchBoundedText(url, USER_AGENT, signal);
 }
 
 async function fetchArxivApi(params: URLSearchParams, signal?: AbortSignal): Promise<string> {

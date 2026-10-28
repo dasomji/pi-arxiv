@@ -62,6 +62,7 @@ This extension was inspired by the Pi arXiv plugins that came before it:
 
 ## Notes
 
+- Remote XML and Markdown responses are limited to 20 MiB and 120 seconds per request, including body reads. Caller cancellation remains supported.
 - arXiv API calls are throttled with a 3 second delay between requests, following arXiv's guidance for repeated API calls.
 - `arxiv_fetch2md` depends on arxiv2md's public API and its rate limits.
 - PDF-only arXiv papers may not have structured HTML; in that case arxiv2md may fail and a dedicated PDF extraction fallback would be needed.
